@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="container neon-border">
+      <header>
+        <h1>Rock Paper Scissors</h1>
+        <div class="score-board">
+          <p>Score</p>
+          <span id="score">0</span>
+        </div>
+      </header>
+      <main>
+        <div id="choices" class="choices">
+          <button class="choice neon-circle" data-choice="rock">
+            <span>✊</span>
+          </button>
+          <button class="choice neon-circle" data-choice="paper">
+            <span>✋</span>
+          </button>
+          <button class="choice neon-circle" data-choice="scissors">
+            <span>✌️</span>
+          </button>
+        </div>        
+          <div class="computer-choice">
+            <p>The House Picked</p>
+            <div id="computer-choice" class="choice-display"></div>
+          </div>
+        </div>
+      </main>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
+
