@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Victor Rock Paper Scissors App</title>
+    <title>Rock, Paper, Scissors</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -26,7 +26,16 @@
           <button class="choice neon-circle" data-choice="scissors">
             <span>✌️</span>
           </button>
-        </div>        
+        </div>
+        <div id="result" class="result hidden">
+          <div class="player-choice">
+            <p>You Picked</p>
+            <div id="player-choice" class="choice-display"></div>
+          </div>
+          <div class="outcome">
+            <h2 id="outcome-message"></h2>
+            <button id="play-again">Play Again</button>
+          </div>
           <div class="computer-choice">
             <p>The House Picked</p>
             <div id="computer-choice" class="choice-display"></div>
@@ -49,6 +58,14 @@
       <button id="toggle-theme">🌓</button>
       <button id="toggle-music">🔇</button>
     </div>
+    <audio id="background-music" loop>
+      <source
+        src="https://assets.codepen.io/217233/Cyberpunk+Moonlight+Sonata.mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
