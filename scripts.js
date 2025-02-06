@@ -8,12 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const playAgainBtn = document.getElementById("play-again");
   const scoreEl = document.getElementById("score");
   const toggleThemeBtn = document.getElementById("toggle-theme");
-  const toggleMusicBtn = document.getElementById("toggle-music");
-  const toggleInstructionsBtn = document.getElementById("toggle-instructions");
+  const howToPlayBtn = document.getElementById("how-to-play");
   const instructionsEl = document.getElementById("instructions");
   const closeInstructionsBtn = document.getElementById("close-instructions");
-  const gameAudio = document.getElementById("game-audio"); // Updated line
-  const howToPlayBtn = document.getElementById("how-to-play"); // Added line
 
   let score = 0;
 
@@ -51,28 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  toggleMusicBtn.addEventListener("click", () => {
-    // Updated event listener
-    if (gameAudio.paused) {
-      gameAudio.play();
-      toggleMusicBtn.textContent = "🔊";
-    } else {
-      gameAudio.pause();
-      toggleMusicBtn.textContent = "🔇";
-    }
-  });
-
-  toggleInstructionsBtn.addEventListener("click", () => {
+  howToPlayBtn.addEventListener("click", () => {
     instructionsEl.classList.remove("hidden");
   });
 
   closeInstructionsBtn.addEventListener("click", () => {
     instructionsEl.classList.add("hidden");
-  });
-
-  howToPlayBtn.addEventListener("click", () => {
-    // Added event listener
-    instructionsEl.classList.remove("hidden");
   });
 
   function playRound(playerChoice) {
@@ -129,15 +110,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  //Import confetti function.  This assumes confetti.js is included in your HTML file.
   function celebrateWin() {
-    // Import confetti function here if it's from an external library.  For this example, we'll just simulate it.
-    console.log("Confetti celebration!");
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
   }
 
   // Initialize the game
   function initGame() {
-    // Updated initGame function
-    gameAudio.volume = 0.5; // Set initial volume to 50%
+    // No initialization needed for this version
   }
 
   initGame();

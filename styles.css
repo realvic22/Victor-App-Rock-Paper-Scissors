@@ -37,6 +37,9 @@ body {
   padding: 20px;
   background-color: var(--bg-color);
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -47,6 +50,7 @@ header {
   border-radius: 15px;
   padding: 12px 20px;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 h1 {
@@ -275,6 +279,22 @@ h1 {
   margin-top: 10px;
 }
 
+.how-to-play-btn {
+  background-color: var(--neon-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+  margin-top: 30px;
+}
+
+.how-to-play-btn:hover {
+  background-color: var(--neon-color-alt);
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 10px;
@@ -316,6 +336,11 @@ h1 {
 
   .controls button {
     font-size: 1.5rem;
+  }
+
+  .how-to-play-btn {
+    padding: 8px 16px;
+    font-size: 1em;
   }
 }
 
